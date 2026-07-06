@@ -5,21 +5,21 @@
 class Sbomhub < Formula
   desc "CLI for SBOMHub - SBOM generation and vulnerability scanning"
   homepage "https://sbomhub.app"
-  version "1.4.0"
+  version "1.4.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/youichi-uda/sbomhub-cli/releases/download/v1.4.0/sbomhub-cli_darwin_amd64.tar.gz"
-      sha256 "c998a5d459d958272322b599aa8775130eecc8611080110a40174f0d8e51dab2"
+      url "https://github.com/youichi-uda/sbomhub-cli/releases/download/v1.4.1/sbomhub-cli_darwin_amd64.tar.gz"
+      sha256 "02d86f87ce32726a0ecf429b4603628a9624362d6deae81a37f0230051520db6"
 
       define_method(:install) do
         bin.install "sbomhub"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/youichi-uda/sbomhub-cli/releases/download/v1.4.0/sbomhub-cli_darwin_arm64.tar.gz"
-      sha256 "edaae2f825b1b8af6a8abae2e7317d9367af198fd17eab483a499d131af0e07b"
+      url "https://github.com/youichi-uda/sbomhub-cli/releases/download/v1.4.1/sbomhub-cli_darwin_arm64.tar.gz"
+      sha256 "21d72c027634f0856c2bbcb102691920c3f67bfb240feac85dd9f27ac826950c"
 
       define_method(:install) do
         bin.install "sbomhub"
@@ -29,15 +29,15 @@ class Sbomhub < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youichi-uda/sbomhub-cli/releases/download/v1.4.0/sbomhub-cli_linux_amd64.tar.gz"
-      sha256 "ea1ec936c72061c1a42afb1b3d85cd35591448436c6d76bf3ec28213f625a6a3"
+      url "https://github.com/youichi-uda/sbomhub-cli/releases/download/v1.4.1/sbomhub-cli_linux_amd64.tar.gz"
+      sha256 "b7ce0218351f836c5015b726e2a2be17b202dbb621eb84dd8e55724722e87193"
       define_method(:install) do
         bin.install "sbomhub"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/youichi-uda/sbomhub-cli/releases/download/v1.4.0/sbomhub-cli_linux_arm64.tar.gz"
-      sha256 "d157489b470a9acdebf89ca2fb837e0203e10f41264dc4ab7445f29de0d7e124"
+      url "https://github.com/youichi-uda/sbomhub-cli/releases/download/v1.4.1/sbomhub-cli_linux_arm64.tar.gz"
+      sha256 "16642f0af5a57be172d1a74ef238a8d12cc2c58b87706519da937ec62ebddb1b"
       define_method(:install) do
         bin.install "sbomhub"
       end
